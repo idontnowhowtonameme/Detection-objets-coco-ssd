@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Object Scanner - URL Uniquement</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+<body>
+    <div class="app-container">
+        <h1>Analyseur d'Image IA</h1>
+        
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="Collez l'URL d'une image (http...)">
+            <button id="analyzeBtn" class="primary-btn" disabled>Scanner l'image</button>
+        </div>
+
+        <div id="statusMessage" class="status-info">Initialisation de l'IA...</div>
+
+        <div id="objectList" class="object-list">
+            <span class="placeholder">Entrez une URL pour commencer l'analyse</span>
+        </div>
+
+        <div class="view-area">
+            <div class="canvas-wrapper">
+                <img id="img" crossorigin="anonymous" style="display:none;">
+                <canvas id="outputCanvas"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
